@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\ArtisteController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageController;
+use App\Models\Image;
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,3 +22,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('image-upload', [ImageController::class, 'index']);
 Route::post('image-upload', [ImageController::class, 'store'])->name('image.store');
+
+Route::ressource('artistes', ArtisteController::class);
+Route::ressource('images', ImageController::class);
