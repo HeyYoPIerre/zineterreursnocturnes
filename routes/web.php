@@ -12,7 +12,7 @@ Route::get('/', function () {
 
 Auth::routes([
     'login' => true,
-    'register' => false,
+    'register' => true,
     'reset' => true, // Réinitialisation de mot de passe
     'verify' => false, // Vérification d'email
 ]);
@@ -22,6 +22,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('image-upload', [ImageController::class, 'index']);
 Route::post('image-upload', [ImageController::class, 'store'])->name('image.store');
-
-Route::ressource('artistes', ArtisteController::class);
-Route::ressource('images', ImageController::class);
+Route::middleware(['auth'])->group(function () {
+    Route::resource('artistes', ArtisteController::class);
+    Route::resource('images', ImageController::class);
+});
