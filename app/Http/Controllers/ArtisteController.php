@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Artiste;
 use Illuminate\Http\Request;
 
 class ArtisteController extends Controller
@@ -12,7 +13,8 @@ class ArtisteController extends Controller
      */
     public function index()
     {
-        //
+        $artistes = Artiste::all();
+        return view('index', compact('artistes'));
     }
 
     /**
