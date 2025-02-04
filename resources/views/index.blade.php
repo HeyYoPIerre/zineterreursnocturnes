@@ -37,5 +37,8 @@
                 </table>
             </div>
         </div>
+        <footer class="card-footer">
+            {{ $artistes->links() }}
+        </footer>
     </div>
 @endsection

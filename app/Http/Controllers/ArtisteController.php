@@ -13,7 +13,7 @@ class ArtisteController extends Controller
      */
     public function index()
     {
-        $artistes = Artiste::all();
+        $artistes = Artiste::paginate(5);
         return view('index', compact('artistes'));
     }
 
