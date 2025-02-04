@@ -1,6 +1,15 @@
 @extends('template')
 
 @section('content')
+@section('css')
+    <style>
+        .card-footer {
+            justify-content: center;
+            align-items: center;
+            padding: 0.4em;
+        }
+    </style>
+@endsection
     <div class="card">
         <header class="card-header">
             <p class="card-header-title">Artistes</p>
