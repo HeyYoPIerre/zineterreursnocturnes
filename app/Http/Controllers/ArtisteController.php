@@ -77,10 +77,13 @@ class ArtisteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Artiste $artiste)
+    public function destroy(Request $request, Artiste $artiste)
     {
-        $artiste->delete();
+        if ($request->input('confirm') !== 'yes') {
+            return redirect()->back()->with('error', 'Suppression annulée.');
+        }
 
-        return back()->with('info', 'L Artiste a bien été supprimé dans la base de données.');
+        $artiste->delete();
+        return back()->with('info', 'Artiste supprimé avec succès.');
     }
 }

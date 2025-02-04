@@ -34,8 +34,17 @@
                                         <form action="{{ route('artistes.destroy', $artiste->id) }}" method="post">
                                             @csrf
                                             @method('DELETE')
-                                            <button class="button is-danger" type="submit">Supprimer</button>
+                                            <button type="button" class="button is-danger" id="confirmDeleteBtn">Supprimer</button>
                                         </form>
+                                        <script>
+                                            document.getElementById('confirmDeleteBtn').addEventListener('click', function(event) {
+                                                // Afficher la confirmation avec un message
+                                                if (confirm('Êtes-vous sûr de vouloir supprimer cet artiste ? Cette action est irréversible.')) {
+                                                    // Si l'utilisateur confirme, soumettre le formulaire
+                                                    document.getElementById('deleteForm').submit();
+                                                }
+                                            });
+                                        </script>
                                     </td>
                                 </tr>
                             @endforeach
