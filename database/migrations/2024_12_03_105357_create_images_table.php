@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('images', function (Blueprint $table) {
             $table->id();
             $table->foreignId('artiste_id')->constrained()->onDelete('cascade');
-            $table->string('path'); 
+            $table->longText('base64'); 
             $table->timestamps();        
         });
     }

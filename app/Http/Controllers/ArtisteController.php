@@ -4,34 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Artiste;
 use Illuminate\Http\Request;
+use Illuminate\View\ViewException;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\ArtisteRequest;
 
 class ArtisteController extends Controller
 {
-    public function storeImage(Request $request, $id)
-    {
-        $request->validate([
-            'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
-        ]);
-    
-        $artiste = Artiste::findOrFail($id);
-    
-        $path = $request->file('image')->store('images', 'public'); // Stockage dans storage/app/public/images
-    
-        $artiste->images()->create([
-            'path' => $path,
-        ]);
-    
-        return back()->with('success', 'Image ajoutée avec succès');
-    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         $artistes = Artiste::paginate(5);
-        return view('index', compact('artistes'));
+        return view('dashboard.index', compact('artistes'));
     }
 
     /**
@@ -39,23 +25,27 @@ class ArtisteController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ArtisteRequest $artisteRequest)
     {
-        //
+        Artiste::create($artisteRequest->all());
+
+        return redirect()->route('artistes.index')->with('info', 'Un artiste a bien été créé');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Artiste $artiste)
+    public function show(int $id)
     {
-        return view('show', compact('artiste'));
+
+        $artiste = Artiste::where('id', $id)->with('images')->first();
+        return view('dashboard.show', compact('artiste'));
     }
 
     /**

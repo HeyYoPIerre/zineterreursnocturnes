@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Image;
+use App\Models\Artiste;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 use App\Http\Requests\StoreImage;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManagerStatic;
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 
 class ImageController extends Controller
@@ -35,7 +36,19 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-    
+        $request->validate([
+            'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+        ]);
+        
+        $image = $request->file('image');
+        $base64 = base64_encode(file_get_contents($image->path()));
+        
+        Image::create([
+            'base64' => $base64,
+            'artiste_id' => $request->artiste_id,
+        ]);
+        
+        return back()->with('success', 'Image ajoutée avec succès');
     }
 
     /**
@@ -43,7 +56,7 @@ class ImageController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**

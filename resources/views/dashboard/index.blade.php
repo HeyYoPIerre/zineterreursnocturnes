@@ -1,4 +1,4 @@
-@extends('template')
+@extends('layouts.app')
 
 @section('content')
     @if(session()->has('info'))
@@ -10,6 +10,7 @@
         <div class="card">
             <header class="card-header">
                 <p class="card-header-title">Artistes</p>
+                <a class="button is-info" href="{{ route('artistes.create') }}">Créer un artiste</a>
             </header>
             <div class="card-content">
                 <div class="content">

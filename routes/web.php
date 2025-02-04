@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\ArtisteController;
+use App\Models\Image;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageController;
-use App\Models\Image;
+use App\Http\Controllers\ArtisteController;
+use Illuminate\Auth\Middleware\Authenticate;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,7 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('image-upload', [ImageController::class, 'index']);
 Route::post('image-upload', [ImageController::class, 'store'])->name('image.store');
-Route::middleware(['auth'])->group(function () {
+Route::group(['prefix' => '/dashboard/', 'middleware' => Authenticate::class], function(): void {    
     Route::resource('artistes', ArtisteController::class);
     Route::resource('images', ImageController::class);
 });

@@ -1,4 +1,4 @@
-@extends('template')
+@extends('layouts.app')
 
 @section('content')
     <div class="card">
@@ -13,7 +13,7 @@
                 <div class="col">
                     @if (!empty($artiste->images) && $artiste->images->count() > 0)
                         @foreach($artiste->images as $image)
-                            <img src="{{ asset('storage/' . $image->path) }}" alt="Image de {{ $artiste->nom }}" width="200">
+                            <img src="{{ 'data:image/png;base64,' . $image->base64 }}" alt="Image de {{ $artiste->nom }}" width="200">
                         @endforeach
                         @else
                         <p>Aucune image disponible</p>
