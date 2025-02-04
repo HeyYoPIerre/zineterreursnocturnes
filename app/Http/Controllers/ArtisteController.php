@@ -36,9 +36,9 @@ class ArtisteController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Artiste $artiste)
     {
-        //
+        return view('show', compact('artiste'));
     }
 
     /**
