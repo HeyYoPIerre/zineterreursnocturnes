@@ -2,12 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\Artiste;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
 
 class ArtisteController extends Controller
 {
+    public function storeImage(Request $request, $id)
+    {
+        $request->validate([
+            'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+        ]);
+    
+        $artiste = Artiste::findOrFail($id);
+    
+        $path = $request->file('image')->store('images', 'public'); // Stockage dans storage/app/public/images
+    
+        $artiste->images()->create([
+            'path' => $path,
+        ]);
+    
+        return back()->with('success', 'Image ajoutée avec succès');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -60,8 +77,10 @@ class ArtisteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Artiste $artiste)
     {
-        //
+        $artiste->delete();
+
+        return back()->with('info', 'L Artiste a bien été supprimé dans la base de données.');
     }
 }

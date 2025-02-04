@@ -35,30 +35,7 @@ class ImageController extends Controller
      */
     public function store(Request $request)
     {
-        $filepath = request('image');
-        
-        if(request('format') == 0)
-        {
-            $width = 2000;
-            $height = 1333;
-        }
-        else
-        {
-            $width = 1333;
-            $height = 2000;
-        }
-
-        $photo = Image::make($filepath)->fit($width,$height);
-        $photoName = Str::random(10) . time() . ".webp";
-        Storage::disk('public')->put('/images/' . $photoName, $photo->encode('webp'));
-
-
-        $image = new Image();
-        $image->alt = $request->alt;
-        $image->filepath = '/images/' . $photoName;
-        $image->save();
-
-        return redirect('/admin/photos');
+    
     }
 
     /**
