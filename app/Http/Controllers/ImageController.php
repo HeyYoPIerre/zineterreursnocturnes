@@ -28,7 +28,8 @@ class ImageController extends Controller
      */
     public function create()
     {
-        //
+        $artistes = Artiste::all();
+        return view('dashboard.images.create', compact('artistes'));
     }
 
     /**

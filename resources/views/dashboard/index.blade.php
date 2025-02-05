@@ -8,9 +8,10 @@
     @endif
     <div class="card">
         <div class="card">
-            <header class="card-header">
+            <header class="card-header d-flex align-items-center">
                 <p class="card-header-title">Artistes</p>
                 <a class="button is-info" href="{{ route('artistes.create') }}">Créer un artiste</a>
+                <a class="button is-success" href="{{ route('images.create') }}">Ajouter une image</a>
             </header>
             <div class="card-content">
                 <div class="content">
