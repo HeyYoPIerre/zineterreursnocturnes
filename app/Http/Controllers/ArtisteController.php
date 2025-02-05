@@ -51,19 +51,20 @@ class ArtisteController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Artiste $artiste)
     {
-        //
+        return view('dashboard.edit', compact('artiste'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ArtisteRequest $artisteRequest, Artiste $artiste)
     {
-        //
+        $artiste->update($artisteRequest->all());
+    
+        return redirect()->route('artistes.index')->with('info', 'L Artiste a bien été modifié');
     }
-
     /**
      * Remove the specified resource from storage.
      */
