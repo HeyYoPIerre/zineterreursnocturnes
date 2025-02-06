@@ -21,9 +21,11 @@ Auth::routes([
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+
 Route::get('image-upload', [ImageController::class, 'index']);
 Route::post('image-upload', [ImageController::class, 'store'])->name('image.store');
-Route::group(['prefix' => '/dashboard/', 'middleware' => Authenticate::class], function(): void {    
+Route::group(['prefix' => 'dashboard', 'middleware' => Authenticate::class], function(): void {
+    Route::get('index', [ArtisteController::class, 'index'])->name('dashboard.index');  
     Route::resource('artistes', ArtisteController::class);
     Route::resource('images', ImageController::class);
 });

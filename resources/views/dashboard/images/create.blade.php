@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container card">
+<div class="container mt-4">
     <h2>Ajouter une image</h2>
     
     @if(session('success'))
@@ -16,7 +16,7 @@
             <label for="image" class="form-label">Choisir une image :</label>
             <input type="file" class="form-control" name="image" id="image" required>
             @error('image')
-                <div class="text-danger">{{ $message }}</div>
+                <div class="text-danger mt-1">{{ $message }}</div>
             @enderror
         </div>
 
@@ -29,7 +29,7 @@
                 @endforeach
             </select>
             @error('artiste_id')
-                <div class="text-danger">{{ $message }}</div>
+                <div class="text-danger mt-1">{{ $message }}</div>
             @enderror
         </div>
 

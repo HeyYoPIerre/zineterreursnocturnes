@@ -2,71 +2,72 @@
 
 @section('content')
     @if(session()->has('info'))
-        <div class="notification is-success">
+        <div class="alert alert-success">
             {{ session('info') }}
         </div>
     @endif
-    <div class="container">
+    <div class="container mt-4">
         <div class="card">
-            <div class="card">
-                <header class="card-header d-flex align-items-center">
-                    <p class="card-header-title">Artistes</p>
-                    <a class="button is-info" href="{{ route('artistes.create') }}">Créer un artiste</a>
-                    <a class="button is-success" href="{{ route('images.create') }}">Ajouter une image</a>
+            <div class="card-body">
+                <header class="d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Artistes</h5>
+                    <div>
+                        <a class="btn btn-info" href="{{ route('artistes.create') }}">Créer un artiste</a>
+                        <a class="btn btn-success" href="{{ route('images.create') }}">Ajouter une image</a>
+                    </div>
                 </header>
-                <div class="card-content">
-                    <div class="content">
-                        <table class="table is-hoverable">
-                            <thead>
+                <div class="mt-3">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nom</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($artistes as $artiste)
                                 <tr>
-                                    <th>#</th>
-                                    <th>Nom</th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($artistes as $artiste)
-                                    <tr>
-                                        <td>{{ $artiste->id }}</td>
-                                        <td><strong>{{ $artiste->nom }}</strong></td>
-                                        <td><a class="button is-primary" href="{{ route('artistes.show', $artiste->id) }}">Voir</a></td>
-                                        <td><a class="button is-warning" href="{{ route('artistes.edit', $artiste->id) }}">Modifier</a></td>
-                                        <td>
-                                            <form action="{{ route('artistes.destroy', $artiste->id) }}" method="post" class="delete-form">
-                                                @csrf
-                                                @method('DELETE')
-                                                <input type="hidden" name="confirm" value="yes"> <!-- Ajout de ce champ caché -->
-                                                <button type="button" class="button is-danger delete-btn">Supprimer</button>
-                                            </form>
-                                        </td>
-                                        
-                                        <script>
-                                            document.addEventListener("DOMContentLoaded", function() {
-                                                document.querySelectorAll(".delete-btn").forEach(button => {
-                                                    button.addEventListener("click", function(event) {
-                                                        event.preventDefault(); // Empêche toute action par défaut
-                                                        event.stopImmediatePropagation(); // Empêche l'exécution multiple
-                                        
-                                                        let confirmation = confirm('Êtes-vous sûr de vouloir supprimer cet artiste ? Cette action est irréversible.');
-                                                        
-                                                        if (confirmation) {
-                                                            this.closest(".delete-form").submit();
-                                                        }
-                                                    });
+                                    <td>{{ $artiste->id }}</td>
+                                    <td><strong>{{ $artiste->nom }}</strong></td>
+                                    <td><a class="btn btn-primary" href="{{ route('artistes.show', $artiste->id) }}">Voir</a></td>
+                                    <td><a class="btn btn-warning" href="{{ route('artistes.edit', $artiste->id) }}">Modifier</a></td>
+                                    <td>
+                                        <form action="{{ route('artistes.destroy', $artiste->id) }}" method="post" class="delete-form">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input type="hidden" name="confirm" value="yes">
+                                            <button type="button" class="btn btn-danger delete-btn">Supprimer</button>
+                                        </form>
+                                    </td>
+                                    
+                                    <script>
+                                        document.addEventListener("DOMContentLoaded", function() {
+                                            document.querySelectorAll(".delete-btn").forEach(button => {
+                                                button.addEventListener("click", function(event) {
+                                                    event.preventDefault();
+                                                    event.stopImmediatePropagation();
+                                                
+                                                    let confirmation = confirm('Êtes-vous sûr de vouloir supprimer cet artiste ? Cette action est irréversible.');
+                                                    
+                                                    if (confirmation) {
+                                                        this.closest(".delete-form").submit();
+                                                    }
                                                 });
                                             });
-                                        </script>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
+                                        });
+                                    </script>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
                 <footer class="card-footer">
                     {{ $artistes->links() }}
                 </footer>
             </div>
+        </div>
     </div>
 @endsection
