@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.delete-image-btn {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: red;
+    color: white;
+    border: none;
+    font-size: 18px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.delete-image-btn:hover {
+    opacity: 1;
+}

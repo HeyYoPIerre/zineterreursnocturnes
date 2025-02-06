@@ -11,12 +11,21 @@
                 <div class="content col d-flex justify-content-center align-items-center">
                     <p>{{ $artiste->description }}</p>
                 </div>
-                <div class="col">
+                <div class="col d-flex flex-wrap">
                     @if (!empty($artiste->images) && $artiste->images->count() > 0)
                         @foreach($artiste->images as $image)
-                            <img src="{{ 'data:image/jpeg;base64,' . $image->base64 }}" alt="Image de {{ $artiste->nom }}" width="200">
+                            <div class="image-container position-relative">
+                                <!-- Croix de suppression -->
+                                <form action="{{ route('images.destroy', $image->id) }}" method="post" class="delete-image-form">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="delete-image-btn">&times;</button>
+                                </form>
+                                <!-- Image -->
+                                <img src="{{ 'data:image/jpeg;base64,' . $image->base64 }}" alt="Image de {{ $artiste->nom }}" width="200">
+                            </div>
                         @endforeach
-                        @else
+                    @else
                         <p>Aucune image disponible</p>
                     @endif
                 </div>
@@ -24,4 +33,4 @@
         </div>
     </div>
 </div>
-@endsection  
+@endsection
