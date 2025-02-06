@@ -43,7 +43,6 @@ class ArtisteController extends Controller
      */
     public function show(int $id)
     {
-
         $artiste = Artiste::where('id', $id)->with('images')->first();
         return view('dashboard.show', compact('artiste'));
     }
