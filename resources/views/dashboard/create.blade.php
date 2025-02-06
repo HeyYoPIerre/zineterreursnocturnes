@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
     <div class="card">
         <header class="card-header">
             <p class="card-header-title">Création d'un artiste</p>
@@ -36,4 +37,5 @@
             </div>
         </div>
     </div>
+</div>
 @endsection

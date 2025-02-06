@@ -8,7 +8,7 @@ use App\Http\Controllers\ArtisteController;
 use Illuminate\Auth\Middleware\Authenticate;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes([
@@ -27,3 +27,5 @@ Route::group(['prefix' => '/dashboard/', 'middleware' => Authenticate::class], f
     Route::resource('artistes', ArtisteController::class);
     Route::resource('images', ImageController::class);
 });
+
+Route::redirect('/dashboard', '/dashboard/artistes');

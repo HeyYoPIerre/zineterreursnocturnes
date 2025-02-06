@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container">
     <div class="card">
         <header class="card-header">
             <p class="card-header-title">Nom : {{ $artiste->nom }}</p>
@@ -22,4 +23,5 @@
             </div>
         </div>
     </div>
+</div>
 @endsection  
