@@ -13,7 +13,7 @@ Route::get('/', function () {
 
 Route::get('/artistes', function () {
     return view('artistes');
-});
+})->name('artistes');
 
 Auth::routes([
     'login' => true,
