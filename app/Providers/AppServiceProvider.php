@@ -19,10 +19,10 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot()
+    public function boot(): void
     {
         View::composer(['artistes'], function ($view) {
-            $artistes = Artiste::all();
+            $artistes = Artiste::with('images')->get();
             $view->with('artistes', $artistes);
         });
     }
