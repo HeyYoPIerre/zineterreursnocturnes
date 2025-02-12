@@ -11,6 +11,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/artistes', function () {
+    return view('artistes');
+});
+
 Auth::routes([
     'login' => true,
     'register' => true,
