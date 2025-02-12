@@ -34,9 +34,8 @@
 #header {
     position: sticky;
     top: 0;
-    z-index: 1000; /* Assurez-vous que la navbar soit toujours au-dessus des autres éléments */
-    background-color: #343a40; /* Couleur de fond de la navbar (assurez-vous qu'elle est bien visible) */
-    box-shadow: 0 4px 2px -2px gray; /* Optionnel : ajouter une ombre portée pour un effet de séparation */
+    z-index: 1000;
+    box-shadow: 0 3px 2px -2px gray; 
 }
 
 #header .navbar-brand img {
