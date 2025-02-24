@@ -7,6 +7,7 @@
         <li class="nav-item d-flex justify-content-end">
           <a class="nav-link" href="{{ route('home') }}">home</a>
           <a class="nav-link" href="{{ route('artistes') }}">Artistes</a>
+          <a class="nav-link" href="{{ route('contact') }}">Contactez-nous</a>
         </li>
         
         @auth
