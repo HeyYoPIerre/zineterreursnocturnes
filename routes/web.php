@@ -16,6 +16,7 @@ Route::get('/artistes', function () {
     return view('artistes');
 })->name('artistes');
 
+
 Auth::routes([
     'login' => true,
     'register' => true,
@@ -27,6 +28,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
 
 Route::get('image-upload', [ImageController::class, 'index']);
 Route::post('image-upload', [ImageController::class, 'store'])->name('image.store');

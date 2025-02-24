@@ -5,9 +5,9 @@
         </a>
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
         <li class="nav-item d-flex justify-content-end">
-          <a class="nav-link" href="{{ route('home') }}">home</a>
+          <a class="nav-link" href="{{ route('home') }}">Home</a>
           <a class="nav-link" href="{{ route('artistes') }}">Artistes</a>
-          <a class="nav-link" href="{{ route('contact') }}">Contactez-nous</a>
+          <a class="nav-link" href="{{ route('contact.create') }}">Contactez-nous</a>
         </li>
         
         @auth
