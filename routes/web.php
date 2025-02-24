@@ -16,6 +16,10 @@ Route::get('/artistes', function () {
     return view('artistes');
 })->name('artistes');
 
+Route::get('/participer', function () {
+    return view('participer');
+})->name('participer');
+
 
 Auth::routes([
     'login' => true,
