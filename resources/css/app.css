@@ -78,24 +78,32 @@ footer .social-media i:hover {
     transition: 0.3s ease-in-out;
 }
 
-/* Container de l'image avec effet parallaxe */
 .parallax-container {
     position: relative;
     overflow: hidden;
 }
 
 .parallax-image {
-    height: 60vh; /* Ajuste la hauteur de l'image */
+    height: 60vh;
     background-image: url('/public/images/Archive-3-2.jpg');
     background-position: center;
     background-size: cover;
-    background-attachment: fixed; /* L'effet de parallaxe */
+    background-attachment: fixed;
     width: 100%;
 }
 
-/* Ajouter un peu d'espace pour que le contenu ne chevauche pas l'image */
+.parallax-image-2 {
+    z-index: 2;
+    height: 60vh; 
+    background-image: url('/public/images/Archive-3-2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; 
+    width: 100%;
+}
+
+
 .container {
     position: relative;
-    z-index: 1; /* Le texte doit être au-dessus de l'image */
-    margin-top: 70px; /* Ajuste si besoin */
+    z-index: 1; 
 }
