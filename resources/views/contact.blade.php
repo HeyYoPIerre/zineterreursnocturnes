@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container my-5">
-    <h2 class="text-center text-uppercase fw-bold mb-4">Contactez-nous</h2>
+    <h2 class="text-center text-uppercase fw-bold mb-4" style="color: #333;">Contactez-nous</h2>
 
     @if (session('success'))
         <div class="alert alert-success">
@@ -10,36 +10,38 @@
         </div>
     @endif
 
-    <form action="{{ route('contact.store') }}" method="POST" class="p-4 shadow rounded bg-light">
+    <form action="{{ route('contact.store') }}" method="POST" class="p-5 shadow-lg rounded-4 bg-light">
         @csrf
-        <div class="mb-3">
-            <label for="name" class="form-label">Nom :</label>
-            <input type="text" id="name" name="name" value="{{ old('name') }}" class="form-control @error('name') is-invalid @enderror" required>
+        <div class="mb-4">
+            <label for="name" class="form-label" style="font-weight: bold; color: #333;">Nom :</label>
+            <input type="text" id="name" name="name" value="{{ old('name') }}" class="form-control @error('name') is-invalid @enderror p-3" style="border-radius: 8px; border: 1px solid #ccc; background-color: #f8f9fa;" required>
             @error('name')
-                <div class="invalid-feedback">{{ $message }}</div>
+                <div class="invalid-feedback" style="color: #e74c3c;">{{ $message }}</div>
             @enderror
         </div>
 
-        <div class="mb-3">
-            <label for="email" class="form-label">Email :</label>
-            <input type="email" id="email" name="email" value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror" required>
+        <div class="mb-4">
+            <label for="email" class="form-label" style="font-weight: bold; color: #333;">Email :</label>
+            <input type="email" id="email" name="email" value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror p-3" style="border-radius: 8px; border: 1px solid #ccc; background-color: #f8f9fa;" required>
             @error('email')
-                <div class="invalid-feedback">{{ $message }}</div>
+                <div class="invalid-feedback" style="color: #e74c3c;">{{ $message }}</div>
             @enderror
         </div>
 
-        <div class="mb-3">
-            <label for="message" class="form-label">Message :</label>
-            <textarea id="message" name="message" rows="5" class="form-control @error('message') is-invalid @enderror" required>{{ old('message') }}</textarea>
+        <div class="mb-4">
+            <label for="message" class="form-label" style="font-weight: bold; color: #333;">Message :</label>
+            <textarea id="message" name="message" rows="5" class="form-control @error('message') is-invalid @enderror p-3" style="border-radius: 8px; border: 1px solid #ccc; background-color: #f8f9fa;" required>{{ old('message') }}</textarea>
             @error('message')
-                <div class="invalid-feedback">{{ $message }}</div>
+                <div class="invalid-feedback" style="color: #e74c3c;">{{ $message }}</div>
             @enderror
         </div>
 
         <input type="text" name="address" style="display:none">
 
         <div class="d-grid">
-            <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
+            <button type="submit" class="btn btn-lg" style="background-color: #333; border: none; border-radius: 30px; color: white; transition: all 0.3s ease;">
+                Envoyer
+            </button>
         </div>
     </form>
 </div>
