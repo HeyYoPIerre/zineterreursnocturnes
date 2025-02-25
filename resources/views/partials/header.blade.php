@@ -3,7 +3,7 @@
         <a class="navbar-brand" href="{{ route('home') }}">
             <img src="{{ asset('images/logoBW.png') }}" alt="Logo" height="40">
         </a>
-        <ul class="navbar-nav flex-grow-1 justify-content-center pe-3 text-uppercase fw-bold fs-4">
+        <ul class="navbar-nav flex-grow-1 justify-content-center pe-3 text-uppercase fw-bold fs-5">
         <li class="nav-item d-flex">
           <a class="nav-link" href="{{ route('home') }}">Home</a>
           <a class="nav-link" href="{{ route('artistes') }}">Artistes</a>
