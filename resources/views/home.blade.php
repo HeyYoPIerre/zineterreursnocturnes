@@ -68,14 +68,13 @@
     </div>
 </div>
 
-<div class="container-fluid my-3 parallax-container">
+<div class="container-fluid my-3">
     <div class="row">
-        <div class="parallax-image-2">
-            <!-- Illustration -->
+        <div class="col p-0">
+            <img src="\images\Archive-3-2.jpg" alt="" class="img-fluid w-100" style="height: 60vh; object-fit: cover;">
         </div>
     </div>
 </div>
-
 
 <div class="container">
     <div class="row">
