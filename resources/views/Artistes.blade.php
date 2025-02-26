@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <div class="row">
         <div class="col">
             <h2 class="text-center text-uppercase fw-bold mb-2">CECI EST UN TITRE</h2>
@@ -30,12 +30,12 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container-fluid">
 
     @foreach($artistes as $artiste)
-    <div class="row align-items-center mb-4 border-bottom pb-3">
+    <div class="row bandeau align-items-center border-bottom pb-3">
 
-        <div class="col-md-6">
+        <div class="col-md-6 pt-4">
             <h3>{{ $artiste->nom }}</h3>
             <p>{{ $artiste->description }}</p>
         </div>
