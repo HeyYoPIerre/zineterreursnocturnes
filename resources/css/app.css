@@ -147,7 +147,25 @@ footer .social-media i:hover {
 }
 
 .bandeau {
+    height: 50vh;
     box-shadow:  0 10px 15px -3px rgba(0, 0, 0, 0.1), 
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
-
 }
+
+.bandeau .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.slide
+.carousel-item
+.carousel-inner{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+

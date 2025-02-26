@@ -36,7 +36,7 @@
     <div class="row bandeau align-items-center border-bottom pb-3">
 
         <div class="col-md-6 pt-4">
-            <h3>{{ $artiste->nom }}</h3>
+            <h3 class="pb-3 text-uppercase fw-bold">{{ $artiste->nom }}</h3>
             <p>{{ $artiste->description }}</p>
         </div>
 
@@ -46,7 +46,7 @@
                 <div class="carousel-inner">
                     @foreach($artiste->images as $key => $image)
                         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                            <img src="{{ 'data:image/jpeg;base64,' . $image->base64 }}" alt="Image de {{ $artiste->nom }}" class="img-fluid" style="max-width: 200px;">
+                            <img src="{{ 'data:image/jpeg;base64,' . $image->base64 }}" alt="Image de {{ $artiste->nom }}" class="img-fluid">
                         </div>
                     @endforeach
                 </div>
