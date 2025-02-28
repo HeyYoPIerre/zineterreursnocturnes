@@ -171,12 +171,6 @@ footer .social-media i:hover {
     align-items: center;
 }
 
-.carousel-item img {
-    max-height: 100%;
-    width: auto;
-    object-fit: contain; /* Garantit que l’image reste entièrement visible */
-}
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-image: none !important;
