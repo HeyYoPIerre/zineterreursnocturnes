@@ -31,40 +31,72 @@
 </div>
 
 <div class="container-fluid">
-
     @foreach($artistes as $artiste)
-    <div class="row bandeau align-items-center border-bottom pb-3">
-
-        <div class="col-md-6 pt-4">
-            <h3 class="pb-3 text-uppercase fw-bold">{{ $artiste->nom }}</h3>
-            <p>{{ $artiste->description }}</p>
-        </div>
-
-        <div class="col-md-6">
-            @if($artiste->images->count() > 0)
-            <div id="carousel{{ $artiste->id }}" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    @foreach($artiste->images as $key => $image)
-                        <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                            <img src="{{ 'data:image/jpeg;base64,' . $image->base64 }}" alt="Image de {{ $artiste->nom }}" class="img-fluid">
+    <div class="row bandeau align-items-center border-bottom pt-3 pb-3">
+        
+        @if($loop->index % 2 == 0)
+            <!-- Texte à gauche, image à droite -->
+            <div class="col-md-6 pt-4">
+                <h3 class="pb-3 text-uppercase fw-bold">{{ $artiste->nom }}</h3>
+                <p>{{ $artiste->description }}</p>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                @if($artiste->images->count() > 0)
+                    <div id="carousel{{ $artiste->id }}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                        <div class="carousel-inner">
+                            @foreach($artiste->images as $key => $image)
+                                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                    <img src="{{ 'data:image/jpeg;base64,' . $image->base64 }}" alt="Image de {{ $artiste->nom }}" class="img-fluid">
+                                </div>
+                            @endforeach
                         </div>
-                    @endforeach
-                </div>
 
-                @if($artiste->images->count() > 1)
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel{{ $artiste->id }}" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carousel{{ $artiste->id }}" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    </button>
+                        @if($artiste->images->count() > 1)
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel{{ $artiste->id }}" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel{{ $artiste->id }}" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        @endif
+                    </div>
+                @else
+                    <p>Aucune image disponible</p>
                 @endif
             </div>
-            @else
-                <p>Aucune image disponible</p>
-            @endif
-        </div>
+        @else
+            <!-- Image à gauche, texte à droite -->
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                @if($artiste->images->count() > 0)
+                    <div id="carousel{{ $artiste->id }}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                        <div class="carousel-inner">
+                            @foreach($artiste->images as $key => $image)
+                                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                                    <img src="{{ 'data:image/jpeg;base64,' . $image->base64 }}" alt="Image de {{ $artiste->nom }}" class="img-fluid">
+                                </div>
+                            @endforeach
+                        </div>
+
+                        @if($artiste->images->count() > 1)
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel{{ $artiste->id }}" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel{{ $artiste->id }}" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
+                        @endif
+                    </div>
+                @else
+                    <p>Aucune image disponible</p>
+                @endif
+            </div>
+            <div class="col-md-6 pt-4">
+                <h3 class="pb-3 text-uppercase fw-bold">{{ $artiste->nom }}</h3>
+                <p>{{ $artiste->description }}</p>
+            </div>
+        @endif
     </div>
     @endforeach
 </div>
+
 @endsection

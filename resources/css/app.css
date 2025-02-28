@@ -159,13 +159,28 @@ footer .social-media i:hover {
     align-items: center;
     text-align: center;
     height: 100%;
+    overflow: hidden;
 }
 
 .slide
 .carousel-item
 .carousel-inner{
+    object-fit: contain;
     height: 100%;
     display: flex;
     align-items: center;
 }
 
+.carousel-item img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain; /* Garantit que l’image reste entièrement visible */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none !important;
+    background-color: transparent !important; 
+    width: 50px; 
+    height: 50px;
+}
