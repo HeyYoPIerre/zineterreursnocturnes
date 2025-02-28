@@ -86,11 +86,27 @@
     }
 }
 
+
+body{
+    position: relative;
+}
+
+.page-artistes body {
+    position: static;
+}
+.page-artistes footer {
+    position: static;
+}
+.page-artistes footer .social-media i{
+    color: #5f5f5f;
+}
+
 footer {
     color: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
@@ -112,7 +128,7 @@ footer .social-media i {
     margin-right: 15px;
     padding: 5px;
     text-align: center;
-    color: #5f5f5f;
+    color: #fff;
 }
 
 footer .social-media i:hover {
@@ -132,6 +148,15 @@ footer .social-media i:hover {
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
+}
+
+.parallax-image-2 {
+    background-image: url('/public/images/Archive-3-2.jpg'); /* Change l’image */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+    height: 60vh;
 }
 
 .container {

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container mt-5">
+<div class="container my-5">
     <div class="row">
         <div class="col">
             <h2 class="text-center text-uppercase fw-bold mb-2">CECI EST UN TITRE</h2>
@@ -30,7 +30,7 @@
     </div>
 </div>
 
-<div class="container-fluid my-3 parallax-container">
+<div class="container-fluid parallax-container">
     <div class="row">
         <div class="col p-0">
             <div class="parallax-image">

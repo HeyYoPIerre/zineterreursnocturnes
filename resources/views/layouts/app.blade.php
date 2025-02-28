@@ -13,11 +13,13 @@
   </head>
 
 
-  <body class="d-flex flex-column min-vh-100">    
+  <body class="d-flex flex-column min-vh-100 @yield('body_class')">    
     
     @include('partials.header')
     {{--Content--}}
+    <div class="d-flex flex-column flex-grow-1">
       @yield('content')
+    </div>
     {{--Content--}} 
     @include('partials.footer')
     @vite('resources/js/app.js')

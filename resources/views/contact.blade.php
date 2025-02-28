@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<main>
 <div class="container my-5">
     <h2 class="text-center text-uppercase fw-bold mb-4" style="color: #333;">Contactez-nous</h2>
 
@@ -46,7 +47,7 @@
     </form>
 </div>
 
-    <div class="container mt-5">
+    <div class="container my-5">
         <div class="row">
             <div class="col">
                 <h2 class="text-center text-uppercase fw-bold mb-2">CECI EST UN TITRE</h2>
@@ -74,7 +75,7 @@
         </div>
     </div>
     
-    <div class="container-fluid my-3 parallax-container">
+    <div class="container-fluid parallax-container">
         <div class="row">
             <div class="col p-0">
                 <div class="parallax-image">
@@ -83,5 +84,5 @@
             </div>
         </div>
     </div>
-    
+</main>
 @endsection

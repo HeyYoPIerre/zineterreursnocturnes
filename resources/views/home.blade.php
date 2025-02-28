@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="fond-parallax">
 
-<div class="container mt-5">
+</div>
+<div class="container my-5">
     <div class="row">
         <div class="col">
             <h2 class="text-center text-uppercase fw-bold mb-2">CECI EST UN TITRE</h2>
@@ -30,7 +32,7 @@
     </div>
 </div>
 
-<div class="container-fluid my-3 parallax-container">
+<div class="container-fluid parallax-container">
     <div class="row">
         <div class="col p-0">
             <div class="parallax-image">
@@ -40,7 +42,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container my-5">
     <div class="row">
         <div class="col">
             <h3 class="text-center text-uppercase fw-bold mb-2">CECI EST UN TITRE</h3>
@@ -68,10 +70,10 @@
     </div>
 </div>
 
-<div class="container-fluid my-3">
+<div class="container-fluid">
     <div class="row">
         <div class="col p-0">
-            <img src="\images\Archive-3-2.jpg" alt="" class="img-fluid w-100" style="height: 60vh; object-fit: cover;">
+            <div class="parallax-image-2"></div>        
         </div>
     </div>
 </div>
@@ -79,7 +81,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h3 class="text-center text-uppercase fw-bold mb-2">CECI EST UN TITRE</h3>
+            <h4 class="text-center text-uppercase fw-bold mb-2">CECI EST UN TITRE</h4>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod quia, eum quas accusamus aliquid laborum deserunt voluptatum perspiciatis, beatae commodi doloremque veniam. Non suscipit laboriosam omnis totam odit, fugit in?
         Dignissimos explicabo autem vero nostrum commodi, recusandae maiores quod sint. Odit molestiae recusandae officiis dolorem aperiam, omnis quasi repudiandae consequuntur. Hic enim obcaecati nulla sunt autem eos placeat unde alias.
         Totam quam voluptate aliquam laborum excepturi. Possimus, eius facere ducimus soluta et cupiditate inventore temporibus odit nostrum? Numquam dicta ipsa sunt eius dolorem eligendi, fuga illum quisquam reiciendis repellendus libero!

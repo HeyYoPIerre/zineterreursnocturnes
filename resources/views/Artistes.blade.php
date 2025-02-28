@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('body_class')
+    page-artistes
+@endsection
+
 @section('content')
 
 <div class="container mt-5 mb-5">
