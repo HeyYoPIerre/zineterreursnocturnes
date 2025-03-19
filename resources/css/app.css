@@ -2,15 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-.titre-parallaxe {
-    font-family: 'StormGust', sans-serif;
-    font-size: 40px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
 .fond-parallaxe{
     background-color: #821b14;
+}
+
+.titre-parallaxe {
+    background-image: url('/public/images/TERREURS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NOCTURNES.png');
+}
+
+.parallaxe-asset1{
+    background-image: url('/public/images/forêt\ 1_.png');
+}
+
+.parallaxe-asset2{
+    background-image: url('/public/images/forêt\ fond.png');
+}
+
+.parallaxe-asset3{
+    background-image: url('/public/images/ramifications.png');
+}
+
+.parallaxe-asset4{
+    background-image: url('/public/images/Calque\ 8\ copie.png');
+}
+
+.fond-parallaxe2{
+    background-color: #000;
 }
 
 .image-container {
@@ -161,7 +178,7 @@ footer .social-media i:hover {
 }
 
 .parallax-image-2 {
-    background-image: url('/public/images/Archive-3-2.jpg'); /* Change l’image */
+    background-image: url('/public/images/Archive-3-2.jpg'); /* Changer l’image */
     background-position: center;
     background-size: cover;
     background-attachment: fixed;

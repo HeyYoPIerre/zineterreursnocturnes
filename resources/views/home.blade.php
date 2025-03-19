@@ -4,13 +4,16 @@
 <div class="fond-parallaxe">
 </div>
 <div class="titre-parallaxe">
-    <h1>TERREURS NOCTURNES</h1>
 </div>
 <div class="parallaxe-asset1">    
 </div>
 <div class="parallaxe-asset2">    
 </div>
 <div class="parallaxe-asset3">    
+</div>
+<div class="parallaxe-asset4">    
+</div>
+<div class="fond-parallaxe2">
 </div>
 
 
