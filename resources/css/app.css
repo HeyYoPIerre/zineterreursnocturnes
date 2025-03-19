@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.fond-parallax{
+    background-color: #821b14;
+}
 
 .image-container {
     position: relative;

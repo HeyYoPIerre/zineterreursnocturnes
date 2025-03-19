@@ -78,7 +78,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container my-5">
     <div class="row">
         <div class="col">
             <h4 class="text-center text-uppercase fw-bold mb-2">CECI EST UN TITRE</h4>
