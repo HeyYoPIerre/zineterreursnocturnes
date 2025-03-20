@@ -3,12 +3,45 @@
 @tailwind utilities;
 
 .fond-parallaxe{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
     background-color: #821b14;
 }
 
 .titre-parallaxe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-image: url('/public/images/TERREURS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NOCTURNES.png');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
 }
+
+.fond-parallaxe,
+.parallaxe-asset1,
+.parallaxe-asset2,
+.parallaxe-asset3,
+.parallaxe-asset4,
+.fond-parallaxe2 {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: 10; /* S'assurer qu'ils sont bien au-dessus */
+}
+
+.fond-parallaxe { z-index: 1; }
+.titre-parallaxe { z-index: 2; }
+.parallaxe-asset1 { z-index: 3; }
+.parallaxe-asset2 { z-index: 4; }
+.parallaxe-asset3 { z-index: 5; } /* Celui qui reste visible */
+.parallaxe-asset4 { z-index: 6; }
+.fond-parallaxe2 { z-index: 7; }
 
 .parallaxe-asset1{
     background-image: url('/public/images/forêt\ 1_.png');
@@ -27,7 +60,21 @@
 }
 
 .fond-parallaxe2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
     background-color: #000;
+}
+
+.postparallaxe{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.show-content .postparallaxe {
+    opacity: 1;
 }
 
 .image-container {
