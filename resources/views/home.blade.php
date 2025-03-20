@@ -18,8 +18,6 @@
     </div>
     <div class="parallaxe-asset4">    
     </div>
-    <div class="fond-parallaxe2">
-    </div>
 </div>
 
 
@@ -50,6 +48,8 @@
         </div>
     </div>
 </div>
+
+
 
 <div class="container-fluid parallax-container">
     <div class="row">
