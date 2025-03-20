@@ -1,23 +1,29 @@
 @extends('layouts.app')
 
+@section('body_class')
+    home-page 
+@endsection
+
 @section('content')
-<div class="fond-parallaxe">
-</div>
-<div class="titre-parallaxe">
-</div>
-<div class="parallaxe-asset1">    
-</div>
-<div class="parallaxe-asset2">    
-</div>
-<div class="parallaxe-asset3">    
-</div>
-<div class="parallaxe-asset4">    
-</div>
-<div class="fond-parallaxe2">
+<div class="parallaxe-container">
+    <div class="fond-parallaxe">
+    </div>
+    <div class="titre-parallaxe">
+    </div>
+    <div class="parallaxe-asset1">    
+    </div>
+    <div class="parallaxe-asset2">    
+    </div>
+    <div class="parallaxe-asset3">    
+    </div>
+    <div class="parallaxe-asset4">    
+    </div>
+    <div class="fond-parallaxe2">
+    </div>
 </div>
 
 
-<div class="container postparallaxe my-5">
+<div class="container my-5">
     <div class="row">
         <div class="col">
             <h2 class="text-center text-uppercase fw-bold mb-2">CECI EST UN TITRE</h2>

@@ -2,12 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+.home-page {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.home-page #header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+header.visible {
+    opacity: 1;
+}
+
+.parallaxe-container {
+    position: relative;
+    height: 100vh; 
+    overflow: hidden;
+}
+
 .fond-parallaxe{
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh; 
     background-color: #821b14;
+    z-index: 1;
 }
 
 .titre-parallaxe {
@@ -15,40 +43,38 @@
     top: 0;
     left: 0;
     width: 100%;
+    height: 50vh; /* Ajustable selon le rendu souhaité */
     background-image: url('/public/images/TERREURS-NOCTURNES.png');
-    height: 100vh;
     background-position: center;
-    background-size: cover;
+    background-size: contain; /* Empêche l'image d'être trop coupée */
+    background-repeat: no-repeat;
+    z-index: 4; /* S'assurer qu'il est devant au début */
+    transition: opacity 0.5s, transform 0.5s;
 }
 
-.fond-parallaxe,
 .parallaxe-asset1,
 .parallaxe-asset2,
 .parallaxe-asset3,
-.parallaxe-asset4,
-.fond-parallaxe2 {
-    position: fixed;
+.parallaxe-asset4 {
+    position: absolute;
     width: 100%;
-    height: 100vh;
-    background-size: cover;
+    height: 100vh;  /* ou une taille fixe si nécessaire, ajuster selon ton besoin */
+    background-size: cover;  /* S'assurer que l'image couvre toute la surface de l'élément */
     background-position: center;
-    z-index: 10; /* S'assurer qu'ils sont bien au-dessus */
+    background-repeat: no-repeat;
 }
 
-.fond-parallaxe { z-index: 1; }
-.titre-parallaxe { z-index: 2; }
-.parallaxe-asset1 { z-index: 3; }
-.parallaxe-asset2 { z-index: 4; }
-.parallaxe-asset3 { z-index: 5; } /* Celui qui reste visible */
-.parallaxe-asset4 { z-index: 6; }
-.fond-parallaxe2 { z-index: 7; }
+.parallaxe-asset1 { top: 0; z-index: 2; }
+.parallaxe-asset2 { top: 0; z-index: 3; }
+.parallaxe-asset3 { top: 0; z-index: 4; }
+.parallaxe-asset4 { bottom: 0; z-index: 5; }
 
 .parallaxe-asset1{
-    background-image: url('/public/images/forêt\ 1_.png');
+    background-image: url('/public/images/forêt-1_.png');
 }
 
 .parallaxe-asset2{
-    background-image: url('/public/images/forêt\ fond.png');
+    background-image: url('/public/images/forêt-fond.png');
 }
 
 .parallaxe-asset3{
@@ -56,16 +82,16 @@
 }
 
 .parallaxe-asset4{
-    background-image: url('/public/images/Calque\ 8\ copie.png');
+    background-image: url('/public/images/Calque-8-copie.png');
 }
 
 .fond-parallaxe2{
     position: absolute;
     bottom: 0;
-    left: 0;
     width: 100%;
-    height: 200px;
+    height: 50vh;
     background-color: #000;
+    z-index: 4;
 }
 
 .postparallaxe{
@@ -75,6 +101,10 @@
 
 .show-content .postparallaxe {
     opacity: 1;
+}
+
+.show-content {
+    overflow: auto !important;
 }
 
 .image-container {
