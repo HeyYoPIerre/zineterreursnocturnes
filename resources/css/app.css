@@ -13,11 +13,14 @@
     z-index: 5; /* Le contenu de la page sous le parallaxe */
 }
 
+.postparallaxe {
+    padding-top: 190vh;
+}
+
 .home-page #header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 1rem;
     text-align: center;
@@ -25,8 +28,8 @@
     transition: opacity 0.5s;
 }
 
-header.visible {
-    opacity: 1;
+.visible {
+    opacity: 1 !important;
 }
 
 .parallaxe-container {
@@ -74,10 +77,10 @@ header.visible {
     background-repeat: no-repeat;
 }
 
-.parallaxe-asset1 { top: 40px; z-index: 2; }
+.parallaxe-asset1 { top: 8vh; z-index: 2; }
 .parallaxe-asset2 { top: 40px; z-index: 3; }
 .parallaxe-asset3 { top: 70vh; z-index: 4; }
-.parallaxe-asset4 { bottom: 40px; z-index: 5; }
+.parallaxe-asset4 { bottom: -10vh; z-index: 5; }
 
 .parallaxe-asset1{
     background-image: url('/public/images/forêt-1_.png');
@@ -93,19 +96,6 @@ header.visible {
 
 .parallaxe-asset4{
     background-image: url('/public/images/Calque-8-copie.png');
-}
-
-.postparallaxe{
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.show-content .postparallaxe {
-    opacity: 1;
-}
-
-.show-content {
-    overflow: auto !important;
 }
 
 .image-container {
@@ -203,6 +193,16 @@ body{
     position: static;
 }
 .page-artistes footer .social-media i{
+    color: #5f5f5f;
+}
+
+.home-page body {
+    position: static;
+}
+.home-page footer {
+    position: static;
+}
+.home-page footer .social-media i{
     color: #5f5f5f;
 }
 
