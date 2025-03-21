@@ -33,12 +33,11 @@
 }
 
 .parallaxe-container {
-    position: fixed;  /* Ou absolute, selon ton besoin */
+    position: fixed;  
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;  /* Prendre la hauteur de l'écran */
-    z-index: 10;    /* Placer par-dessus tout le reste de la page */
+    height: 100vh;  
     overflow: hidden;
 }
 
@@ -201,6 +200,7 @@ body{
 }
 .home-page footer {
     position: static;
+    z-index: 2;
 }
 .home-page footer .social-media i{
     color: #5f5f5f;
