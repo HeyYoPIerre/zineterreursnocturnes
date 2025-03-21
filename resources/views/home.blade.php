@@ -127,6 +127,6 @@
 
 @endsection
 
-@section('scripts')
-    <script src="{{ asset('js/parallax.js') }}"></script> 
-@endsection
+@push('scripts')
+    @vite('resources/js/parallax.js')
+@endpush
