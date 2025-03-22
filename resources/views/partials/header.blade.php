@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light sticky-top" id="header">
     <div class="container-fluid">
-      <a class="navbar-brand" href="http://zineterreursnocturnes.test/home">
+      <a class="navbar-brand" href="{{ route('home') }}">
         <img src="{{ asset('images/logoBW.png') }}" alt="Logo" height="40">
       </a>
       
