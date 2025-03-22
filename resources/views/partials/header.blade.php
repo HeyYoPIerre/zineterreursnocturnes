@@ -23,9 +23,12 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ route('contact.create') }}">Contactez-nous</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('dashboard.index') }}">Dashboard</a>
-          </li>
+
+          @auth
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('dashboard.index') }}">Dashboard</a>
+            </li>
+          @endauth
         </ul>
       </div>
     </div>
