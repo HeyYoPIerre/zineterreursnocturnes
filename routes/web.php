@@ -8,10 +8,6 @@ use App\Http\Controllers\ArtisteController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Auth\Middleware\Authenticate;
 
-Route::get('/', function () {
-    return view('home');
-});
-
 Route::get('/artistes', function () {
     return view('artistes');
 })->name('artistes');
@@ -28,7 +24,7 @@ Auth::routes([
     'verify' => false, // Vérification d'email
 ]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
