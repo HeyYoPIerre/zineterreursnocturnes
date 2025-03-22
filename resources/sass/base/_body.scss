@@ -1,0 +1,8 @@
+body {
+    position: relative;
+
+    .container {
+        position: relative;
+        z-index: 5; /* Le contenu de la page sous le parallaxe */
+    }
+}

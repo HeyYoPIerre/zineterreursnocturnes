@@ -1,0 +1,28 @@
+.home-page {
+    overflow-x: hidden;
+    margin: 0;
+
+    body {
+        position: static;
+
+        #header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        footer {
+            position: static;
+            z-index: 2;
+
+            .social-media i {
+                color: #5f5f5f;
+            }
+        }
+    }
+}

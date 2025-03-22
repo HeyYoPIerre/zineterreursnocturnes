@@ -1,0 +1,92 @@
+
+.postparallaxe {
+    padding-top: 190vh;
+}
+
+.parallaxe-container {
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;  
+    overflow: hidden;
+}
+
+.fond-parallaxe{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    background-color: #821b14;
+    z-index: 1;
+}
+
+.titre-parallaxe {
+    position: absolute;
+    top: 3vh;
+    left: 0;
+    width: 100%;
+    height: 35vh; /* Ajustable selon le rendu souhaité */
+    background-image: url('/public/images/TERREURS-NOCTURNES.png');
+    background-position: center;
+    background-size: contain; /* Empêche l'image d'être trop coupée */
+    background-repeat: no-repeat;
+    z-index: 3; /* S'assurer qu'il est devant au début */
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.parallaxe-asset1,
+.parallaxe-asset2,
+.parallaxe-asset3,
+.parallaxe-asset4 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;  /* ou une taille fixe si nécessaire, ajuster selon ton besoin */
+    background-size: cover;  /* S'assurer que l'image couvre toute la surface de l'élément */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.parallaxe-asset1 { top: 8vh; z-index: 2; }
+.parallaxe-asset2 { top: 59px; z-index: 3; }
+.parallaxe-asset3 { top: 71vh; z-index: 4; }
+.parallaxe-asset4 { bottom: -10vh; z-index: 5; }
+
+.parallaxe-asset1{
+    background-image: url('/public/images/forêt-1_.png');
+}
+
+.parallaxe-asset2{
+    background-image: url('/public/images/forêt-fond.png');
+}
+
+.parallaxe-asset3{
+    background-image: url('/public/images/ramifications.png');
+}
+
+.parallaxe-asset4{
+    background-image: url('/public/images/Calque-8-copie.png');
+}
+
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-image {
+    height: 60vh;
+    background-image: url('/public/images/Archive-3-2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.parallax-image-2 {
+    background-image: url('/public/images/Archive-3-2.jpg'); /* Changer l’image */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+    height: 60vh;
+}
