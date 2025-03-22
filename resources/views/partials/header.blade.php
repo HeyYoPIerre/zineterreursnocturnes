@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-light sticky-top" id="header">
     <div class="container-fluid">
       <a class="navbar-brand" href="http://zineterreursnocturnes.test/home">
-        <img src="http://zineterreursnocturnes.test/images/logoBW.png" alt="Logo" height="40">
+        <img src="{{ asset('images/logoBW.png') }}" alt="Logo" height="40">
       </a>
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
