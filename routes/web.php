@@ -36,8 +36,9 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 
 Route::get('image-upload', [ImageController::class, 'index']);
 Route::post('image-upload', [ImageController::class, 'store'])->name('image.store');
+
 Route::group(['prefix' => 'dashboard', 'middleware' => Authenticate::class], function(): void {
-    Route::get('index', [ArtisteController::class, 'index'])->name('dashboard.index');  
+    Route::get('index', [ArtisteController::class, 'index'])->name('dashboard.index');
     Route::resource('artistes', ArtisteController::class);
     Route::resource('images', ImageController::class);
 });
