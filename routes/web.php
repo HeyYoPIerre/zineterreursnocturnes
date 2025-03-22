@@ -1,21 +1,12 @@
 <?php
 
-use App\Models\Image;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\ArtisteController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\StaticPageController;
 use Illuminate\Auth\Middleware\Authenticate;
-
-Route::get('/artistes', function () {
-    return view('artistes');
-})->name('artistes');
-
-Route::get('/participer', function () {
-    return view('participer');
-})->name('participer');
-
 
 Auth::routes([
     'login' => true,
@@ -24,11 +15,12 @@ Auth::routes([
     'verify' => false, // Vérification d'email
 ]);
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [StaticPageController::class, 'home'])->name('home');
+Route::get('artistes', [StaticPageController::class, 'artistes'])->name('artistes');
+Route::get('participer', [StaticPageController::class, 'participer'])->name('participer');
 
 Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
-
 
 Route::get('image-upload', [ImageController::class, 'index']);
 Route::post('image-upload', [ImageController::class, 'store'])->name('image.store');
