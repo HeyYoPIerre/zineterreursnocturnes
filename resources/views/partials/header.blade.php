@@ -4,13 +4,11 @@
         <img src="http://zineterreursnocturnes.test/images/logoBW.png" alt="Logo" height="40">
       </a>
       
-      <!-- Bouton du menu burger -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
   
-      <!-- Contenu du menu -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
