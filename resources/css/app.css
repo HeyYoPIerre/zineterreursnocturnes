@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 .home-page {
     overflow-x: hidden;
@@ -129,26 +126,28 @@
     background-color: #fff;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 10;
     box-shadow: 0 3px 2px -2px gray; 
 }
 
 #header .navbar-brand img {
     height: 40px; 
-    width: auto ;
+    width: auto;
 }
 
-#menu-items {
+.navbar-nav {
     display: flex;
     justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
     width: 100%;
 }
 
 .nav-item {
     margin: 0 10px;
+}
+
+.nav-link:hover {
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-link {
@@ -159,27 +158,16 @@
 }
 
 @media (max-width: 991px) {
-    #menu-items {
-        display: none; 
-        width: 100%;
-        text-align: center;
+    .navbar-collapse {
         background-color: #fff;
-        position: absolute;
-        top: 60px;
-        left: 0;
+        text-align: center;
         padding: 10px 0;
-        z-index: 1;
     }
 
     .nav-item {
         margin: 10px 0;
     }
-
-    #menu-toggle {
-        display: block;
-    }
 }
-
 
 body{
     position: relative;
@@ -277,7 +265,8 @@ footer .social-media i:hover {
 }
 
 .bandeau {
-    height: 50vh;
+    min-height: 50vh;
+    max-height: 70vh;
     box-shadow:  0 10px 15px -3px rgba(0, 0, 0, 0.1), 
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
@@ -288,9 +277,21 @@ footer .social-media i:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100%;
     overflow: hidden;
 }
+
+@media (max-width: 768px) {
+    .bandeau {
+        min-height: auto; /* Permet à la hauteur de s'adapter au contenu */
+        height: auto; /* Supprime toute contrainte de hauteur */
+    }
+
+    .bandeau .col-md-6 {
+        height: auto; /* Ajuste les sections selon le contenu */
+        padding: 20px; /* Ajoute un peu d'espace pour aérer */
+    }
+}
+
 
 .slide
 .carousel-item

@@ -36,15 +36,15 @@
 
 <div class="container-fluid">
     @foreach($artistes as $artiste)
-    <div class="row bandeau align-items-center border-bottom pt-3 pb-3">
+    <div class="row bandeau align-items-center border-bottom pt-3 pb-3 d-flex flex-wrap">
         
         @if($loop->index % 2 == 0)
             <!-- Texte à gauche, image à droite -->
-            <div class="col-md-6 pt-4">
+            <div class="col-12 col-md-6 pt-4">
                 <h3 class="pb-3 text-uppercase fw-bold">{{ $artiste->nom }}</h3>
                 <p>{{ $artiste->description }}</p>
             </div>
-            <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
                 @if($artiste->images->count() > 0)
                     <div id="carousel{{ $artiste->id }}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                         <div class="carousel-inner">
@@ -70,7 +70,7 @@
             </div>
         @else
             <!-- Image à gauche, texte à droite -->
-            <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center order-md-1 order-2">
                 @if($artiste->images->count() > 0)
                     <div id="carousel{{ $artiste->id }}" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                         <div class="carousel-inner">
@@ -94,7 +94,7 @@
                     <p>Aucune image disponible</p>
                 @endif
             </div>
-            <div class="col-md-6 pt-4">
+            <div class="col-12 col-md-6 pt-4 order-md-2 order-1">
                 <h3 class="pb-3 text-uppercase fw-bold">{{ $artiste->nom }}</h3>
                 <p>{{ $artiste->description }}</p>
             </div>
@@ -102,5 +102,4 @@
     </div>
     @endforeach
 </div>
-
 @endsection
