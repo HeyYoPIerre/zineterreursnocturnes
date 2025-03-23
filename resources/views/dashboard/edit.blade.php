@@ -19,10 +19,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description" placeholder="Description de l'Artiste">{{ old('description', $artiste->description) }}</textarea>
-                    @error('description')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
+                    <x-tinymce name="description">{{ $artiste->description }}</x-tinymce>
+
                 </div>
                 <div class="mb-3">
                     <button class="btn btn-primary" type="submit">Envoyer</button>

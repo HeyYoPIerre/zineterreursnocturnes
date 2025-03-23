@@ -9,6 +9,7 @@
     <meta http-equiv="Cache-control" content="public">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>ZineTerreursNocturnes</title>
+    <script src="{{ asset('node_modules/tinymce/tinymce.min.js') }}"></script>
 
     @vite(['resources/sass/app.scss'])
     @stack('style')
@@ -26,6 +27,5 @@
 
         @vite(['resources/js/app.js'])
         @stack('scripts')
-        <script src="{{ asset('node_modules/tinymce/tinymce.min.js') }}"></script>
     </body>
 </html>

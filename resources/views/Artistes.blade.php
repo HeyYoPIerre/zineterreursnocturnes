@@ -78,7 +78,7 @@
                     <div
                         class="col-12 col-md-6 pt-4 d-flex flex-column justify-content-center align-items-center text-center overflow-hidden">
                         <h3 class="pb-3 text-uppercase fw-bold">{{ $artiste->nom }}</h3>
-                        <p>{{ $artiste->description }}</p>
+                        <p>{!! $artiste->description !!}</p>
                     </div>
                 @endsection
                 @section("carousel_image{$loop->iteration}")

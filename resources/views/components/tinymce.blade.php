@@ -13,7 +13,7 @@
         @disabled($disabled)
         name="{{ $name }}"
         id="{{ $id }}"
-    ></textarea>
+    >{{ $slot }}</textarea>
 </div>
 
 @error ($name)
