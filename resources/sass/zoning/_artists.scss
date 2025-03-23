@@ -1,7 +1,5 @@
 .page-artistes {
-    body {
         position: static;
-    }
 
     footer {
         position: static;
@@ -9,5 +7,21 @@
         .social-media i {
             color: #5f5f5f;
         }
+    }
+}
+
+.bandeau {
+    min-height: 50vh;
+    max-height: 70vh;
+    box-shadow:  0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+}
+
+@media (max-width: 768px) {
+    .bandeau {
+        min-height: auto; 
+        height: auto;
+        
     }
 }
