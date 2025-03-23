@@ -73,6 +73,7 @@
     background-size: cover;  /* S'assurer que l'image couvre toute la surface de l'élément */
     background-position: center;
     background-repeat: no-repeat;
+    filter: brightness(0);
 }
 
 .parallaxe-asset1 {
