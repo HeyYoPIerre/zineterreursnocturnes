@@ -6,3 +6,49 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+// Base
+@import 'base/body';
+@import 'base/button';
+@import 'base/image';
+@import 'base/opacity';
+
+// Plugins
+@import 'plugins/carousel';
+
+// Zoning
+@import 'zoning/artists';
+@import 'zoning/footer';
+@import 'zoning/header';
+@import 'zoning/home';
+
+/**
+ *  Temporary scss, to be put in dedicated files later
+ */
+.bandeau {
+    min-height: 50vh;
+    max-height: 70vh;
+    box-shadow:  0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+
+    .col-md-6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    .bandeau {
+        min-height: auto; /* Permet à la hauteur de s'adapter au contenu */
+        height: auto; /* Supprime toute contrainte de hauteur */
+
+        .col-md-6 {
+            height: auto; /* Ajuste les sections selon le contenu */
+            padding: 20px; /* Ajoute un peu d'espace pour aérer */
+        }
+    }
+}
