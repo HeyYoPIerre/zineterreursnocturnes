@@ -26,5 +26,6 @@
 
         @vite(['resources/js/app.js'])
         @stack('scripts')
+        <script src="{{ asset('node_modules/tinymce/tinymce.min.js') }}"></script>
     </body>
 </html>
