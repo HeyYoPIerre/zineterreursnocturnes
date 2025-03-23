@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+    window.scrollTo(0, 0);
+
     const asset1 = document.querySelector(".parallaxe-asset1");
     const asset2 = document.querySelector(".parallaxe-asset2");
     const asset3 = document.querySelector(".parallaxe-asset3");
