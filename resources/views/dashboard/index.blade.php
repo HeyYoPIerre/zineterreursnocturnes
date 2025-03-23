@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @if(session()->has('info'))
+    @if (session()->has('info'))
         <div class="alert alert-success">
             {{ session('info') }}
         </div>
@@ -28,30 +28,35 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($artistes as $artiste)
+                            @foreach ($artistes as $artiste)
                                 <tr>
                                     <td>{{ $artiste->id }}</td>
                                     <td><strong>{{ $artiste->nom }}</strong></td>
-                                    <td><a class="btn btn-primary" href="{{ route('artistes.show', $artiste->id) }}">Voir</a></td>
-                                    <td><a class="btn btn-warning" href="{{ route('artistes.edit', $artiste->id) }}">Modifier</a></td>
+                                    <td><a class="btn btn-primary"
+                                            href="{{ route('artistes.show', $artiste->id) }}">Voir</a></td>
+                                    <td><a class="btn btn-warning"
+                                            href="{{ route('artistes.edit', $artiste->id) }}">Modifier</a></td>
                                     <td>
-                                        <form action="{{ route('artistes.destroy', $artiste->id) }}" method="post" class="delete-form">
+                                        <form action="{{ route('artistes.destroy', $artiste->id) }}" method="post"
+                                            class="delete-form">
                                             @csrf
                                             @method('DELETE')
                                             <input type="hidden" name="confirm" value="yes">
                                             <button type="button" class="btn btn-danger delete-btn">Supprimer</button>
                                         </form>
                                     </td>
-                                    
+
                                     <script>
                                         document.addEventListener("DOMContentLoaded", function() {
                                             document.querySelectorAll(".delete-btn").forEach(button => {
                                                 button.addEventListener("click", function(event) {
                                                     event.preventDefault();
                                                     event.stopImmediatePropagation();
-                                                
-                                                    let confirmation = confirm('Êtes-vous sûr de vouloir supprimer cet artiste ? Cette action est irréversible.');
-                                                    
+
+                                                    let confirmation = confirm(
+                                                        'Êtes-vous sûr de vouloir supprimer cet artiste ? Cette action est irréversible.'
+                                                        );
+
                                                     if (confirmation) {
                                                         this.closest(".delete-form").submit();
                                                     }
@@ -64,9 +69,11 @@
                         </tbody>
                     </table>
                 </div>
-                <footer class="card-footer">
-                    {{ $artistes->links() }}
-                </footer>
+                @if ($artistes->total() > 10)
+                    <div class="card-footer">
+                        {{ $artistes->links() }}
+                    </div>
+                @endif
             </div>
         </div>
     </div>

@@ -16,7 +16,7 @@ class ArtisteController extends Controller
      */
     public function index()
     {
-        $artistes = Artiste::paginate(5);
+        $artistes = Artiste::paginate(10);
         return view('dashboard.index', compact('artistes'));
     }
 
@@ -33,7 +33,7 @@ class ArtisteController extends Controller
      */
     public function store(ArtisteRequest $artisteRequest)
     {
-        Artiste::create($artisteRequest->all());
+        Artiste::create($artisteRequest->validated());
 
         return redirect()->route('artistes.index')->with('info', 'Un artiste a bien été créé');
     }
