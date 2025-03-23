@@ -4,7 +4,7 @@
     'class'         => '',
     'plugins'       => '',
     'toolbar'       => '',
-    'validElements' => 'h2,h3,p,ul,ol,li,br,em,b,strong/b,a[href|target<_blank?_self],div[align]',
+    'validElements' => 'h2,h3,p,ul,ol,li,br,em,b,strong/b,a[href|target=_blank|rel],div[align]',
     'disabled'      => false,
 ])
 
