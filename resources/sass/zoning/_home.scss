@@ -19,7 +19,7 @@
         z-index: 2;
 
         .social-media i {
-            color: #5f5f5f;
+            color: #fff;
         }
     }
 }
@@ -36,7 +36,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     overflow: hidden;
 }
 
@@ -54,12 +54,12 @@
     top: 3vh;
     left: 0;
     width: 100%;
-    height: 35vh; /* Ajustable selon le rendu souhaité */
+    height: 35vh;
     background-image: url('/public/images/TERREURS-NOCTURNES.png');
     background-position: center;
-    background-size: contain; /* Empêche l'image d'être trop coupée */
+    background-size: contain;
     background-repeat: no-repeat;
-    z-index: 3; /* S'assurer qu'il est devant au début */
+    z-index: 3;
     transition: opacity 0.5s, transform 0.5s;
 }
 
@@ -69,8 +69,8 @@
 .parallaxe-asset4 {
     position: absolute;
     width: 100%;
-    height: 100vh;  /* ou une taille fixe si nécessaire, ajuster selon ton besoin */
-    background-size: cover;  /* S'assurer que l'image couvre toute la surface de l'élément */
+    height: 100vh;
+    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
     filter: brightness(0);
@@ -106,8 +106,8 @@
 }
 
 .parallax-image {
-    height: 60vh;
-    background-image: url('/public/images/Archive-3-2.jpg');
+    height: 80vh;
+    background-image: url('/public/images/alone-site.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -115,10 +115,19 @@
 }
 
 .parallax-image-2 {
-    background-image: url('/public/images/Archive-3-2.jpg'); /* Changer l’image */
+    background-image: url('/public/images/illustration-celestin-1.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     height: auto;
-    height: 60vh;
+    height: 80vh;
+}
+
+.parallax-image-3 {
+    background-image: url('/public/images/illustration-celestin-2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+    height: 80vh;
 }

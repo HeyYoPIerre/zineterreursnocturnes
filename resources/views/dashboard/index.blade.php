@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('body_class', 'dashboard')
+
 @section('content')
     @if (session()->has('info'))
         <div class="alert alert-success">

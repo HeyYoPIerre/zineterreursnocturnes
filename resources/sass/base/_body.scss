@@ -3,6 +3,12 @@ body {
 
     .container {
         position: relative;
-        z-index: 5; /* Le contenu de la page sous le parallaxe */
+        z-index: 5;
     }
+}
+
+.special-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: white;
 }

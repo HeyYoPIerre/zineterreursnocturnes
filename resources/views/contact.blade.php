@@ -47,7 +47,7 @@
     </form>
 </div>
 
-    <div class="container my-5">
+    <div class="container special-text my-5">
         <div class="row">
             <div class="col">
                 <h2 class="text-center text-uppercase fw-bold mb-2">CECI EST UN TITRE</h2>

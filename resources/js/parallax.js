@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fond.style.transform = `translateY(${scrollY * -0.6}px)`;
 
         //disparition du titre
-        titre.style.opacity = Math.max(1 - (scrollY / (limit * 0.2)), 0); 
+        titre.style.opacity = Math.max(1 - (scrollY / (limit * 0.08)), 0); 
         titre.style.transform = `translateY(${scrollY * 0.5}px)`;
         //apparition du header
         if (scrollY > limit * 0.5) {

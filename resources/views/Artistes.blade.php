@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="container mt-5 mb-5">
+    <div class="container special-text mt-5 mb-5">
         <div class="row">
             <div class="col">
                 <h2 class="text-center text-uppercase fw-bold mb-2">CECI EST UN TITRE</h2>

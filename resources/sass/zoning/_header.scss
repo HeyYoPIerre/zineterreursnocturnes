@@ -1,9 +1,8 @@
 #header {
-    background-color: #fff;
+    background-color: #821b14 !important;
     position: sticky;
     top: 0;
     z-index: 10;
-    box-shadow: 0 3px 2px -2px gray;
 
     .navbar-brand img {
         height: 40px; 
@@ -22,13 +21,13 @@
 }
 
 .nav-link {
-    color: #000;
+    color: white;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1rem;
 
     &:hover {
-        color: #333;
+        color: black;
         transition: background-color 0.3s ease, color 0.3s ease;
     }
 }
