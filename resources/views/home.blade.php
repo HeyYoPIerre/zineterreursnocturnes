@@ -24,9 +24,8 @@
     <div class="container special-text postparallaxe my-5">
         <div class="row">
             <div class="col">
-                <h1 class="text-center text-uppercase fw-bold mb-5">terreurs nocturnes</h1>
-                <p> Notre sommes un collectif artistique réunissant des passionnés de l’horreur sous toutes ses formes : auteurs et autrices de bandes dessinées, de nouvelles, d’illustrations et d’articles, ainsi que des graphistes, bêta-lecteurs et bêta-lectrices. Qu’ils soient professionnels ou amateurs, tous partagent un même objectif : faire vibrer, effrayer et captiver à travers des histoires sombres et fascinantes.
-                    Notre engagement s’articule autour de trois grandes missions : </b>
+                <p><b>Terreurs nocturnes</b> est un collectif artistique réunissant des passionnés de l’horreur sous toutes ses formes : auteurs et autrices de bandes dessinées, de nouvelles, d’illustrations et d’articles, ainsi que des graphistes, bêta-lecteurs et bêta-lectrices. Qu’ils soient professionnels ou amateurs, tous partagent un même objectif : faire vibrer, effrayer et captiver à travers des histoires sombres et fascinantes.
+                    Notre engagement s’articule autour de <b>trois grandes missions : </b>
                 </p>
             </div>
         </div>
