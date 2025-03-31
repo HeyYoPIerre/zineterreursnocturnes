@@ -1,1 +1,1 @@
-Site de présentation du Zanzine Terreurs Nocturnes.
+Site de présentation du Fanzine Terreurs Nocturnes. 
