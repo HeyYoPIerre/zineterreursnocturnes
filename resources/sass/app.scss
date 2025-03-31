@@ -26,3 +26,20 @@
  *  Temporary scss, to be put in dedicated files later
  */
 
+ .parallax-image-participer {
+    background-image: url('/public/images/cover-1724329498633.webp');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+    height: 100vh;
+ }
+
+ .parallax-image-contact {
+    background-image: url('/public/images/ye_copie.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+    height: 100vh;
+ }

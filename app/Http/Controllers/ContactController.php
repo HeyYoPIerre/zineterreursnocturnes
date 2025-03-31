@@ -19,7 +19,7 @@ class ContactController extends Controller
     {
         $data = $request->validated();
 
-        Mail::to('pierre.mitou1@gmail.com')->send(new ContactMail($data));
+        Mail::to('fanzineterreursnocturnes@gmail.com')->send(new ContactMail($data));
     
         return redirect()->route('contact.create')->with('success', 'Votre message a été envoyé avec succès !');
     }

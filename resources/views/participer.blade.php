@@ -1,43 +1,50 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="container special-text my-5">
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center text-uppercase fw-bold mb-4">Rejoignez Terreurs Nocturnes </h2>
+                Si tu es auteur/autrice de récits sous forme de BD (comics, manga, franco-belge), de nouvelle, de photo,
+                d’illustrations et que tu souhaites rejoindre notre collectif en proposant un projet pour ce numéro 2, voici
+                la marche à suivre ! <br><br>
 
-<div class="container special-text my-5">
-    <div class="row">
-        <div class="col">
-            <h2 class="text-center text-uppercase fw-bold mb-2">CECI EST UN TITRE</h2>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod quia, eum quas accusamus aliquid laborum deserunt voluptatum perspiciatis, beatae commodi doloremque veniam. Non suscipit laboriosam omnis totam odit, fugit in?
-        Dignissimos explicabo autem vero nostrum commodi, recusandae maiores quod sint. Odit molestiae recusandae officiis dolorem aperiam, omnis quasi repudiandae consequuntur. Hic enim obcaecati nulla sunt autem eos placeat unde alias.
-        Totam quam voluptate aliquam laborum excepturi. Possimus, eius facere ducimus soluta et cupiditate inventore temporibus odit nostrum? Numquam dicta ipsa sunt eius dolorem eligendi, fuga illum quisquam reiciendis repellendus libero!
-        Modi id, soluta, iure voluptates libero atque, sunt sint repellat est laborum quis. Maiores, molestias enim nulla inventore voluptatem est, modi accusamus, harum distinctio porro consectetur nobis esse? Porro, voluptate?
-        Aperiam sint tempore soluta voluptate dolor aliquid inventore beatae sequi animi modi, quod recusandae qui doloremque pariatur? Voluptates quasi blanditiis, amet ex beatae totam, corporis cumque modi accusantium in consequuntur!
-        Culpa, suscipit mollitia velit totam eius ex quo rem voluptate odit nisi nesciunt voluptatum quos necessitatibus, sit, exercitationem illo numquam obcaecati recusandae quaerat. Cumque nisi consequuntur laborum earum rerum est?
-        Rerum dolorum ad aperiam eligendi. Odio odit in accusantium impedit aperiam ratione, temporibus fuga voluptates asperiores? Quas labore tenetur exercitationem vero ex. Earum similique repellat temporibus non asperiores voluptate quam?
-        Quia inventore, sapiente esse porro cum fuga eligendi facilis labore, rem mollitia quidem soluta, reprehenderit amet eveniet neque atque officiis laboriosam! Doloribus modi cupiditate quis, laboriosam sunt similique. Ad, voluptate?
-        Sint voluptas nihil, ratione odit ipsa blanditiis voluptatibus laborum possimus vero tempore officiis delectus voluptatum et corrupti illum animi quasi! Odio nisi tempore minus ut doloremque iste optio blanditiis illum.
-        Ipsum doloremque ipsam nihil omnis est quia id magni sunt, necessitatibus itaque adipisci fuga numquam cupiditate doloribus, accusamus animi rerum repellat similique magnam delectus? Eligendi voluptatem quod deserunt molestias distinctio!
-        Magnam architecto totam quod distinctio similique doloremque perspiciatis cum officia sequi voluptatum a ut aut reiciendis ullam necessitatibus consectetur ex voluptate, eaque laborum odio excepturi quidem aspernatur quae voluptatibus. Nesciunt!
-        Deserunt suscipit ex iure quibusdam possimus amet quos quidem fugiat eveniet placeat veritatis at magnam doloremque, animi commodi voluptates molestiae incidunt dolores illum nihil quaerat ab ratione quas. Labore, aperiam!
-        Beatae, sint quibusdam. Doloremque non eligendi accusantium eius, quae eveniet eos amet cum ad nisi repudiandae veniam, inventore tempora debitis beatae, necessitatibus temporibus voluptatum. Eos ipsa asperiores nemo assumenda tempora!
-        Eaque libero mollitia, exercitationem iusto totam deleniti odio autem, sapiente explicabo molestias officia deserunt excepturi sint placeat et earum facilis! Reiciendis dolorem alias veniam fugiat illum natus dolores in doloremque?
-        Obcaecati optio iste odit ut necessitatibus fugit facere molestias provident quos, dolore quod et laboriosam culpa expedita praesentium distinctio sint aliquam voluptatum veritatis corporis veniam quibusdam illum suscipit. Molestias, beatae.
-        Quae libero, sit minima optio deleniti aliquam temporibus eligendi odio consequuntur soluta voluptatibus voluptas neque corporis odit dolorem, unde harum error accusantium fugit deserunt consequatur eveniet! Vel nobis in omnis.
-        Eum fugit officiis natus nisi dolorem. Officiis, accusamus ab nesciunt dolorum facilis placeat quia sapiente. Rerum repudiandae eveniet accusamus nemo delectus esse, reiciendis ab eligendi minus, sint iste dolorem ducimus.
-        Deleniti modi, recusandae reiciendis consectetur mollitia repudiandae deserunt numquam eos amet voluptatem minima quas possimus magni voluptatum magnam. Omnis, impedit vero? Rerum saepe illum voluptas voluptatum mollitia totam sed officia!
-        Soluta nihil incidunt repellendus recusandae a mollitia dignissimos hic accusamus molestiae nemo veniam facere culpa quos quibusdam, doloribus et tempore corrupti. Fugit aperiam error delectus! Ipsum, necessitatibus. Amet, ipsam. Adipisci!
-        Deleniti blanditiis iusto eaque libero eius iure officia, eveniet quae voluptates doloremque perspiciatis. Iste tenetur nulla voluptates quis alias? Culpa, illo explicabo harum dolores qui cupiditate nulla impedit ducimus error!
-        </div>
-    </div>
-</div>
+                Il nous faut un dossier de pré-projet (PDF) regroupant les éléments suivants :<br><br>
 
-<div class="container-fluid parallax-container">
-    <div class="row">
-        <div class="col p-0">
-            <div class="parallax-image">
-            <!-- Illustration -->
+                Pseudo/nom :<br>
+                Site/réseaux sociaux<br>
+                Synopsis détaillé de ton récit (début, déroulement et fin)<br>
+                Support et technique utilisés : (nouvelle illustrée, BD, photo, article, en digital ou traditionnel).<br>
+                Autant de travaux préparatoires que tu le souhaites, ou des travaux précédents représentatifs de ce que tu
+                souhaite proposer.<br>
+                Pour les Projets BD nous demandons une planche colorisée, et les nouvelles/articles illustrées au moins une
+                illustration qui sera incluse dans le projet final.<br>
+
+                Afin de garder une ligne éditoriale cohérente, il sera nécessaire pour les projets de respecter les règles
+                suivantes :<br>
+
+                Pas de violence sexuelle, ni d'érotisme, ni de pornographie, pas de représentation d’organes génitaux.
+                Pas d'utilisation d'IA.<br>
+                Pour les nouvelles illustrées et les articles, le maximum est de 10000 caractères sur 6 pages + page de
+                présentation (incluant les illustrations).<br>
+                Pour les bande dessinées/comics/mangas, le maximum est de 20 pages + page de présentation.<br>
+                Les projets de nouvelles et de BD doivent être des histoires complètes et indépendantes en couleur ou en
+                niveaux de gris. Nous ne prenons pas de projet uniquement en lining ou noir et blanc.<br>
+                Projet rendu à la date prévue annoncée.<br>
+                Respect de la Direction artistique et de la ligne éditoriale (récits horrifiques).<br>
+
+                Format final du fanzine = Format comics 165 x 240 mm.
             </div>
         </div>
     </div>
-</div>
 
+    <div class="container-fluid parallax-container">
+        <div class="row">
+            <div class="col p-0">
+                <div class="parallax-image-participer">
+                    <!-- Illustration -->
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
