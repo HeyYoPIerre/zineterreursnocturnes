@@ -6,12 +6,12 @@
         <div class="container special-text my-5">
             <div class="row">
                 <div class="col">
-                    <h2 class="text-center text-uppercase fw-bold mb-2">Contactez-nous</h2>
+                    <h2 class="text-center text-uppercase fw-bold mb-5">Contactez-nous</h2>
                     Tu souhaites plus d’informations, proposer un projet, nous donner un coup de main, ou simplement te tenir au courant de nos avancées ?
                     <br>
                     Alors suis nous sur nos réseaux Instagram et facebook ! 
                     <br>
-                    Tu peux également nous joindre par mail à l’adresse suivante :fanzineterreursnocturnes@gmail.com
+                    Tu peux également nous joindre par mail à l’adresse suivante : fanzineterreursnocturnes@gmail.com
                 </div>
             </div>
         </div>

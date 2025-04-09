@@ -7,7 +7,7 @@
     <div class="container special-text mt-5 mb-5">
         <div class="row">
             <div class="col">
-                <h2 class="text-center text-uppercase fw-bold mb-4">Terreurs Nocturnes – Collectif d’Artistes</h2>
+                <h2 class="text-center text-uppercase fw-bold mb-5">Terreurs Nocturnes – Collectif d’Artistes</h2>
                 Terreurs Nocturnes est un collectif d’artistes rassemblant des créateurs aux styles graphiques uniques et
                 aux univers variés. Cette diversité permet d’explorer un large éventail de récits, chacun apportant une
                 vision originale et singulière. <br>

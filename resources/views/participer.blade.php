@@ -4,7 +4,7 @@
     <div class="container special-text my-5">
         <div class="row">
             <div class="col">
-                <h2 class="text-center text-uppercase fw-bold mb-4">Rejoignez Terreurs Nocturnes </h2>
+                <h2 class="text-center text-uppercase fw-bold mb-5">Rejoignez Terreurs Nocturnes </h2>
                 Si tu es auteur/autrice de récits sous forme de BD (comics, manga, franco-belge), de nouvelle, de photo,
                 d’illustrations et que tu souhaites rejoindre notre collectif en proposant un projet pour ce numéro 2, voici
                 la marche à suivre ! <br><br>
