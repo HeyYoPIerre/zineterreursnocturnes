@@ -8,7 +8,10 @@ body {
 }
 
 .special-text {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     color: white;
+    @include media-breakpoint-up(md) {
+        font-size: 1.3rem;
+    }
 }

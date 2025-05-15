@@ -9,9 +9,11 @@
 
  .parallax-image-contact {
     background-image: url('/public/images/ye_copie.jpg');
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: auto;
-    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 75vh;
+    @include media-breakpoint-up(lg) {
+        max-height: 100vh;
+        background-position: -137%;
+    }
  }

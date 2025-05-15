@@ -27,9 +27,16 @@
  *  Temporary scss, to be put in dedicated files later
  */
 
- @font-face {
+@font-face {
     font-family: 'Aquifer';
     src: url('/fonts/Aquifer.woff2') format('woff2'),
-         url('/fonts/Aquifer.woff') format('woff'),
-         url('/fonts/Aquifer.ttf') format('truetype');
-  }
+        url('/fonts/Aquifer.woff') format('woff'),
+        url('/fonts/Aquifer.ttf') format('truetype');
+}
+
+.contact-gradient {
+    background: linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
+    @include media-breakpoint-up(lg) {
+        background: linear-gradient(to right, transparent 0%, black 25%, black 100%);
+    }
+}
