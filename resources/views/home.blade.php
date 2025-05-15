@@ -88,7 +88,7 @@
         <div class="row">
             <div class="col">
                 <h4 class="text-center text-uppercase fw-bold mb-5">Mutualiser les moyens, créer un réseau artistique</h4>
-                <p> Bien que majoritairement amateur et amatrices dans nos domaines respectifs, le but de ce projet est de
+                <p> Bien que majoritairement amateurs et amatrices dans nos domaines respectifs, le but de ce projet est de
                     mutualiser nos expériences, nos compétences, afin de créer ensemble un outil artistique qui touchera un
                     public, donnant une dimension concrète et palpable à une pratique bien trop souvent solitaire.</p>
             </div>

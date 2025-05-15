@@ -18,7 +18,7 @@
     </div>
     <div class="container-fluid">
         @foreach ($artistes as $artiste)
-            <div class="row bandeau align-items-center border-bottom pt-3 pb-3 d-flex flex-wrap">
+            <div class="row bandeau align-items-center border-bottom pt-3 pb-3">
                 @section("artist_content{$loop->iteration}")
                     <div
                         class="col-12 col-md-6 pt-4 d-flex flex-column justify-content-center align-items-center text-center overflow-hidden">
