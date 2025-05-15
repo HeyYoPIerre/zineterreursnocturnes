@@ -13,7 +13,12 @@
     background-repeat: no-repeat;
     min-height: 75vh;
     @include media-breakpoint-up(lg) {
+        min-height: 60vh;
         max-height: 100vh;
-        background-position: -137%;
+        background-position: -20vw;
+    }
+    @include media-breakpoint-up(xl) {
+        min-height: 75vh;
+        background-position: unset;
     }
  }
