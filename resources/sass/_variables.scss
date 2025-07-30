@@ -7,6 +7,11 @@ $font-family-sans-serif: 'Aquifer', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PackardAntiqueRegular', sans-serif;
+  font-weight: bold;
+}
+
 // Bootstrap css variables
 // .card {
 //     --bs-card-bg: white !important;

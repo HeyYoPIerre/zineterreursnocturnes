@@ -34,6 +34,13 @@
         url('/fonts/Aquifer.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'PackardAntiqueRegular';
+    src: url('/fonts/PackardAntiqueRegular.woff2') format('woff2'),
+        url('/fonts/PackardAntiqueRegular.woff') format('woff'),
+        url('/fonts/PackardAntiqueRegular.ttf') format('truetype');
+}
+
 .contact-gradient {
     background: linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
     @include media-breakpoint-up(lg) {
