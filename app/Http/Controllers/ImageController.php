@@ -11,6 +11,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManagerStatic;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
 
 
 class ImageController extends Controller
@@ -40,15 +42,25 @@ class ImageController extends Controller
         $request->validate([
             'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
         ]);
-        
+
+        # Prepare data
         $image = $request->file('image');
-        $base64 = base64_encode(file_get_contents($image->path()));
-        
+        $size = getimagesize($image);
+        $portrait = $size[0] < $size[1];
+
+        # Scale down and encode to webp
+        $imageManager = new ImageManager(new Driver());
+        $converted = $imageManager->read($image);
+        $converted = $portrait
+            ? $converted->scaleDown(height: 1600)
+            : $converted->scaleDown(width: 1600);
+        $converted = (string) $converted->toWebp();
+
         Image::create([
-            'base64' => $base64,
+            'base64' => base64_encode($converted),
             'artiste_id' => $request->artiste_id,
         ]);
-        
+
         return back()->with('success', 'Image ajoutée avec succès');
     }
 
