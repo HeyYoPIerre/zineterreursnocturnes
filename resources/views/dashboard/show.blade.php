@@ -23,7 +23,7 @@
                                     <button type="submit" class="btn btn-danger btn-sm">&times;</button>
                                 </form>
                                 <!-- Image -->
-                                <img src="{{ 'data:image/jpeg;base64,' . $image->base64 }}" alt="Image de {{ $artiste->nom }}" class="img-fluid" style="max-width: 200px;">
+                                <img src="{{ 'data:image/webp;base64,' . $image->base64 }}" alt="Image de {{ $artiste->nom }}" class="img-fluid" style="max-width: 200px;">
                             </div>
                         @endforeach
                     @else

@@ -35,7 +35,7 @@
                                 <div class="carousel-inner">
                                     @foreach ($artiste->images as $key => $image)
                                         <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                                            <img src="{{ 'data:image/jpeg;base64,' . $image->base64 }}"
+                                            <img src="{{ 'data:image/webp;base64,' . $image->base64 }}"
                                                 alt="Image de {{ $artiste->nom }}" class="img-fluid object-fit-contain"
                                                 style="height: 60vh">
                                         </div>

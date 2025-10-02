@@ -40,7 +40,7 @@ class ImageController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+            'image' => 'required|image|mimes:jpg,jpeg,png|max:6000',
         ]);
 
         # Prepare data
@@ -50,7 +50,7 @@ class ImageController extends Controller
 
         # Scale down and encode to webp
         $imageManager = new ImageManager(new Driver());
-        $converted = $imageManager->read($image);
+        $converted = $imageManager->read(file_get_contents($image));
         $converted = $portrait
             ? $converted->scaleDown(height: 1600)
             : $converted->scaleDown(width: 1600);
