@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61c18b07168a71dd0d4d76c9e47f8f0e",
+    "content-hash": "11a6873a64948618f7b661339d54100e",
     "packages": [
         {
             "name": "brick/math",
@@ -1124,16 +1124,16 @@
         },
         {
             "name": "intervention/image",
-            "version": "3.11.2",
+            "version": "3.11.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "ebbb711871fb261c064cf4c422f5f3c124fe1842"
+                "reference": "8c49eb21a6d2572532d1bc425964264f3e496846"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/ebbb711871fb261c064cf4c422f5f3c124fe1842",
-                "reference": "ebbb711871fb261c064cf4c422f5f3c124fe1842",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/8c49eb21a6d2572532d1bc425964264f3e496846",
+                "reference": "8c49eb21a6d2572532d1bc425964264f3e496846",
                 "shasum": ""
             },
             "require": {
@@ -1180,7 +1180,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Intervention/image/issues",
-                "source": "https://github.com/Intervention/image/tree/3.11.2"
+                "source": "https://github.com/Intervention/image/tree/3.11.4"
             },
             "funding": [
                 {
@@ -1196,7 +1196,7 @@
                     "type": "ko_fi"
                 }
             ],
-            "time": "2025-02-27T13:08:55+00:00"
+            "time": "2025-07-30T13:13:19+00:00"
         },
         {
             "name": "intervention/image-laravel",
@@ -10306,12 +10306,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.4"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
